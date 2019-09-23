@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+<h1>{{ "Submit a Suggestion!"}}</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'polls:suggestionForm' %}" method="post">
+{% csrf_token %}
+
+  {{form|crispy}}
+
+
+
+<input type="submit" value="Submit Suggestion">
+</form>
+{% endblock %}
