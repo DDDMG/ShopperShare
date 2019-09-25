@@ -1,9 +1,0 @@
-{% extends 'base.html' %}
-{% block content %}
-<h1>{{ suggestion.body_text }}</h1>
-<ul>
-{% for suggestion in suggestion.suggestion_set.all %}
-    <li>{{ suggestion.suggestion_set}}</li>
-{% endfor %}
-</ul>
-{% endblock %}
